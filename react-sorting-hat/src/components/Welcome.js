@@ -8,7 +8,9 @@ class Welcome extends React.Component{
         return(
             <div className="welcome-div">
                  <h1>Welcome to Hogwards</h1>
-                 <button>Sorting Hat</button>
+                 <button onClick={()=>{
+                    document.querySelector('.sorting-questions').style.display = "block";
+                 }}>Sorting Hat</button>
             </div>
         )
     }
