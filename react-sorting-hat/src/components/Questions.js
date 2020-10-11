@@ -8,17 +8,21 @@ class Questions extends React.Component{
     render(){
         return(
             <div style={{
-                padding: "200px",
+                padding: '50px',
                 display:'none',
+                flexDirection: 'column',
+
             }}
             className="sorting-questions">
-                {this.props.questions.map((item, index)=>{
+                {this.props.questions.map((item, index)=>{    
                     return(
-                        <h1 className='question' id={index} style={{
+                        <button onClick= {this.props.getAnswer} className='question' id={index} style={{
                             border: "1px solid black",
                             padding: "10px",
-                            backgroundColor: "red",
-                        }} key={index}>{item}</h1>
+                            margin: "5px",
+                            fontSize: '1.4rem',
+                            backgroundColor: 'lightblue',
+                        }} key={index}>{item}</button>
                     )
                 })}
             </div>
